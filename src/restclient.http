@@ -1,0 +1,5 @@
+GET https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=Barcelona
+
+###
+
+GET https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=Liverpool 

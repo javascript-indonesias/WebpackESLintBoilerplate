@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Template Webpack Post</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-dark bg-primary">
+                <span class="navbar-brand mb-0 h1">Sample Posts</span>
+            </nav>
+        </header>
+
+        <div class="d-flex justify-content-center">
+            <img
+                src="./img/img_sample.jpeg"
+                alt="Image sample"
+                class="img-thumbnail"
+                width="200"
+                loading="lazy"
+            />
+        </div>
+
+        <main class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Input Post</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="inputPostId">ID Post</label>
+                                <input
+                                    id="inputPostId"
+                                    type="number"
+                                    class="form-control"
+                                    placeholder="ID Post"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPostTitle">Judul Post</label>
+                                <input
+                                    id="inputPostTitle"
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Judul Post"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPostBody">Isi Post</label>
+                                <input
+                                    id="inputPostBody"
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Isi Post"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputUserId">ID Penulis</label>
+                                <input
+                                    id="inputUserId"
+                                    type="number"
+                                    class="form-control"
+                                    placeholder="User Id"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <button id="buttonSave" class="btn btn-success">
+                                    Save
+                                </button>
+                                <button
+                                    id="buttonUpdate"
+                                    class="btn btn-primary"
+                                >
+                                    Update
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="listPost" class="row"></div>
+        </main>
+    </body>
+</html>
