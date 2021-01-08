@@ -14,6 +14,17 @@ const PATHS = {
     src: path.join(__dirname, 'src'),
 };
 
+// Contoh Fungsi untuk Whitelist purge CSS
+function collectSafelist() {
+    return {
+        greedy: [
+            /^animate__animated/,
+            /^animate__fadeOutRight/,
+            /^animate__fadeInLeft/,
+        ],
+    };
+}
+
 const prodConf = {
     mode: 'production',
     optimization: {
@@ -74,6 +85,9 @@ const prodConf = {
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: './',
+                        },
                     },
                     {
                         loader: 'css-loader',
@@ -90,6 +104,7 @@ const prodConf = {
         }),
         new PurgecssPlugin({
             paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
+            safelist: collectSafelist,
         }),
         new CopyPlugin({
             patterns: [{ from: 'src/img', to: './img' }],
