@@ -42,7 +42,6 @@ const prodConf = {
             }),
             new CssMinimizerPlugin({
                 parallel: true,
-                sourceMap: true,
                 minimizerOptions: {
                     preset: [
                         'default',
