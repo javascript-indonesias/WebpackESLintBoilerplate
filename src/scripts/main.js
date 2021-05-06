@@ -207,7 +207,7 @@ function main() {
         const buttonSave = document.querySelector('#buttonSave');
         const buttonUpdate = document.querySelector('#buttonUpdate');
 
-        buttonSave.addEventListener('click', function () {
+        buttonSave.addEventListener('click', () => {
             const post = {
                 id: Number.parseInt(inputPostId.value, 10),
                 title: inputPostTitle.value,
@@ -217,7 +217,7 @@ function main() {
             insertPost(post);
         });
 
-        buttonUpdate.addEventListener('click', function () {
+        buttonUpdate.addEventListener('click', () => {
             const post = {
                 id: Number.parseInt(inputPostId.value, 10),
                 title: inputPostTitle.value,
