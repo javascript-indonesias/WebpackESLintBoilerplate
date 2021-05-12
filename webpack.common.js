@@ -43,11 +43,11 @@ module.exports = {
     },
     plugins: [
         new HtmlWebPackPlugin({
-            template: './src/index.html',
+            template: path.resolve(__dirname, 'src/index.html'),
             filename: 'index.html',
             scriptLoading: 'defer',
             inject: 'body',
-            favicon: './src/favicon.png',
+            favicon: path.resolve(__dirname, 'src/favicon.png'),
         }),
     ],
     devServer: {
